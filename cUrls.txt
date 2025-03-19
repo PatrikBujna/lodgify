@@ -1,0 +1,21 @@
+1. Create showtime
+curl -X POST "http://0.0.0.0/api/showtimes/tt3896198" \
+     -H "Content-Type: application/json" \
+     -d '{
+        "auditorium": "Screen 1",
+        "start_time": "2025-04-01 19:00:00",
+        "seats": ["A1", "A2", "A3", "B1", "B2"]
+     }'
+
+2. Get showtimes
+curl -X GET "http://0.0.0.0/api/showtimes"
+
+3. Create reservation
+curl -X POST "http://0.0.0.0/api/showtimes/1/reservations" \
+     -H "Content-Type: application/json" \
+     -d '{
+        "seats": ["A1", "A2"]
+     }'
+
+4. Confirm reservation
+curl -X PATCH "http://0.0.0.0/api/showtimes/1/reservations/67d9ec8e579a8/confirmation"

@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "1f3e739a-9b0c-49de-a704-0b96b729f21d",
+		"name": "Lodgify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10830055"
+	},
+	"item": [
+		{
+			"name": "Create showtime",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auditorium\": \"Screen 1\",\n    \"start_time\": \"2025-04-01 19:00:00\",\n    \"seats\": [\"A1\", \"A2\", \"A3\", \"B1\", \"B2\"]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0/api/showtimes/tt3896198",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"path": [
+						"api",
+						"showtimes",
+						"tt3896198"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get showtimes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0/api/showtimes",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"path": [
+						"api",
+						"showtimes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Craeate reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"seats\": [\"A1\", \"A2\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0/api/showtimes/1/reservations",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"path": [
+						"api",
+						"showtimes",
+						"1",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm reservation",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0/api/showtimes/1/reservations/67d9ec8e579a8/confirmation",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"path": [
+						"api",
+						"showtimes",
+						"1",
+						"reservations",
+						"67d9ec8e579a8",
+						"confirmation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
