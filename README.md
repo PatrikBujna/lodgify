@@ -42,12 +42,11 @@ This is a Laravel-based Cinema Reservation System designed to manage movie showt
 
 # Pending Features
 
-### Unit and Integration Tests
-
 Unfortunately, due to time constraints, unit and integration tests have not been created. However, I would approach this as follows:
 Unit Tests for handlers, factories, validators, providers, etc. to ensure that the business logic functions correctly.
 Integration Tests for routes, ensuring that the system behaves as expected when interacting with other services (e.g., the OMDb API, Redis, and the database).
 Pest Testing: The tests would be written using the Pest testing framework to take advantage of a simpler syntax and more expressive test cases.
+
 ---
 
 # Installation
